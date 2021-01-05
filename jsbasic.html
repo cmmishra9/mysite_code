@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js exmaple</title>
+    <style>
+        input.btn{
+            padding: 10px;
+            margin: 2px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 26px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color: rgb(0, 0, 119);
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body id="main">
+    <div>
+        <a href="https://www.google.com" target="_blank" id="mylink">Google</a>
+        <img id="logo"/>
+        <button type="button" id="himg">Hide Image</button>
+        <form>
+            <input type="text" name="num" id="num">
+            <input type="button" class="btn" value="click" onclick="msg()">
+        </form>
+    </div>
+    <div id="data" class="block"></div>
+    <p id="intro">JS styling intro</p>
+    <script>
+        var txtdata=document.getElementById("num");
+        var dataid=document.getElementById("data");
+        var block=document.getElementsByClassName("block");
+        var div = document.getElementsByTagName("div");
+
+        let mylist=[];
+        mylist.pop("test")
+        mylist.shift("test","teastfsdf")
+        function msg(e){
+            // e.preventDefault();
+            if(txtdata.value != null){
+                mylist.push(txtdata.value);
+                for(let i in mylist){
+                   dataid.append( mylist[i] +"\n");
+                }
+                txtdata.value = "";
+            }
+        }
+        mylist.splice(0,1) //delete
+        mylist.splice(1, 0, "purple color", "voilet color");
+
+        let myself=["I", "Am", "chandan", "i", "am", "a", "technocrat"];
+
+        document.write(myself.toString() +"<br/>"); //to string
+        document.write(myself.join(" ") +"<br/>");
+        document.write(myself.join("\" \"" ) +"<br/>");
+
+        let sublist = myself.slice(1,3)
+        document.write(sublist)
+
+        // document.write(mylist.concat(sublist))
+        function ipr(text){
+        document.write(text);
+        }
+        ipr(myself.indexOf("chandan"));
+
+    </script>
+    <script src="./main.js"></script>
+</body>
+</html>
