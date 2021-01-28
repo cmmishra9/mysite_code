@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Based Layout</title>
+    <style>
+        body{
+            margin: 0;
+            font-size:16px Arial, sans-serif;
+        }
+        .container{
+            width: 100%;
+            background: #f2f2f2;
+        }
+        .header{
+            padding: 10px 20px;
+            background: #acb3b9; 
+        }
+        .header h1{
+            font-size: 30px;
+        }
+        .nav, .section{
+            float: left;
+            padding: 20px;
+            min-height:450px;
+            box-sizing: border-box;
+        }
+        .nav{
+            width: 20%;
+            background-color: #f2f2f2;
+        }
+        .section{
+            width: 80%;
+        }
+        .nav ul{
+            list-style: none;
+            line-height: 24px;
+            padding: 0;
+        }
+        .nav ul li a{
+            color: #333;
+        }
+        .clearfix:after{
+            content:".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .footer{
+            background-color:aqua;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Site</h1>
+        </div>
+        <div class="main clearfix">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">About</a> </li>
+                    <li><a href="#">Contact</a> </li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Welcome to my site</h2>
+                <p>Here I am desiging this site with html table</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright &copy; Mysite.com</p>
+        </div>
+    </div>
+</body>
+</html>
